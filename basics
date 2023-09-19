@@ -1,0 +1,151 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Object_demo
+{
+    class human
+    {
+        //Each object created from the class human will have, by default, the following instance attributes
+        //These are by default private and each will require a GETTER and SETTER to provide access to the attributes
+        string name;
+        int age;
+        string gender;
+        double height;
+        List<string> spokenWords = new List<string>();
+
+        //GET method for instance variable name
+        public string getName()
+        {
+            return name;
+        }
+
+        //SET method for instance variable name
+        public void setName(string name)
+        {
+            this.name = name; ;
+        }
+
+        //GET method for instance variable age
+        public int getAge()
+        {
+            return age;
+        }
+
+        //SET method for instance variable age
+        public void setAge(int age)
+        {
+            this.age = age; ;
+        }
+
+        //GET method for instance variable gender
+        public string getGender()
+        {
+            return gender;
+        }
+
+        //SET method for instance variable gender
+        public void setGender(string gender)
+        {
+            this.gender = gender; ;
+        }
+
+        //GET method for instance variable height
+        public double getHeight()
+        {
+            return height;
+        }
+        //SET method for spoken words use the .Add method for a list to add new words to the exisiting list
+        public void addSpokenWord(string word)
+        {
+            spokenWords.Add(word);
+        }
+        //GET method for spokenWords
+        public List<string> getListOfSpokenWords()
+        {
+            return spokenWords;
+        }
+
+        //SET method for instance variable height
+        public void setHeight(double height)
+        {
+            this.height = height; ;
+        }
+
+        //These are property equivalents for each of the instance variables shown above.
+        //These can be used instead of instance variables BUT NOT AS WELL AS
+        //These properties are short-hand for instance variables and their GETTER/SETTER methods
+        //Please note that Name is treated differently to name and hence is used to distinugish the property from the instance variable
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        public int Age
+        {
+            get;
+            set;
+        }
+
+        public string Gender
+        {
+            get;
+            set;
+        }
+
+        public double Height
+        {
+            get;
+            set;
+        }
+
+        public List<string> SpokenWords
+        {
+            get;
+            set;
+        }
+        
+        //Default constructor
+        public human()
+        {
+
+        }
+
+        //Constructors are simply methods for creating instances of a class
+        //Constructors, like  methods, can be overloaded
+        //Constructor methods can be differentiated by TYPE, NUMBER and ORDER IN WHICH THEY ARE PASSED of the parameters being passed
+        //Constructor with parameters
+        public human(string name)
+        {
+            this.name = name;//this.refers to the instance variable name to distinguish it from the parameter of the same name being passed through the constructor call
+
+        }
+        //This constructor takes two parameters
+        public human(string name, int age)
+        {
+
+            this.name = name;
+            this.age = age;
+
+        }
+        public human(string name, int age, string gender)
+        {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+
+        }
+
+        public human(string name, string gender, int age, double height)
+        {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.height = height;
+
+        }
+    }
+}
